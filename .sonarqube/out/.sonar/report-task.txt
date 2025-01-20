@@ -2,5 +2,5 @@ projectKey=TestProjectSistemaMedico
 serverUrl=http://localhost:9000
 serverVersion=25.1.0.102122
 dashboardUrl=http://localhost:9000/dashboard?id=TestProjectSistemaMedico
-ceTaskId=c2c46199-9ccd-42a4-bd61-0aa0858cae4f
-ceTaskUrl=http://localhost:9000/api/ce/task?id=c2c46199-9ccd-42a4-bd61-0aa0858cae4f
+ceTaskId=41f37cdf-4812-4065-b981-c7964b90d007
+ceTaskUrl=http://localhost:9000/api/ce/task?id=41f37cdf-4812-4065-b981-c7964b90d007

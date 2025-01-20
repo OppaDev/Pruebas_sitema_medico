@@ -49,10 +49,15 @@ namespace SistemaCitasMedicas.Controllers
             {
                 return BadRequest("Fecha no aceptada");
             }
-            var pacienteExiste = await _dbContext.Pacientes.AnyAsync(p => p.IDPaciente == cita.IDPaciente);
+            var pacienteExiste = await _dbContext.Pacientes.AnyAsync(p => p.IDPaciente == cita.IDPaciente);            
             if (!pacienteExiste)
             {
                 return BadRequest("El paciente no existe");
+            }
+            var doctorExiste = await _dbContext.Doctores.AnyAsync(d => d.IDDoctor == cita.IDDoctor);
+            if (!doctorExiste)
+            {
+                return BadRequest("El Doctor no Existe");
             }
             _dbContext.Entry(cita).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
