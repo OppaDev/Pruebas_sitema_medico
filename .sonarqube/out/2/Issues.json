@@ -12,145 +12,18 @@
       },
       "results": [
         {
-          "ruleId": "CS8618",
+          "ruleId": "S2699",
           "level": "warning",
-          "message": "Non-nullable property 'Pacientes' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
+          "message": "Add at least one assertion to this test case.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/AppDBContext.cs",
+                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/TestSitemaMedico/UnitTest1.cs",
                 "region": {
-                  "startLine": 10,
-                  "startColumn": 16,
-                  "endLine": 10,
-                  "endColumn": 28
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/AppDBContext.cs",
-                "region": {
-                  "startLine": 14,
-                  "startColumn": 33,
-                  "endLine": 14,
-                  "endColumn": 42
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'Doctores' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/AppDBContext.cs",
-                "region": {
-                  "startLine": 10,
-                  "startColumn": 16,
-                  "endLine": 10,
-                  "endColumn": 28
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/AppDBContext.cs",
-                "region": {
-                  "startLine": 15,
-                  "startColumn": 32,
-                  "endLine": 15,
-                  "endColumn": 40
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'Citas' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/AppDBContext.cs",
-                "region": {
-                  "startLine": 10,
-                  "startColumn": 16,
-                  "endLine": 10,
-                  "endColumn": 28
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/AppDBContext.cs",
-                "region": {
-                  "startLine": 16,
-                  "startColumn": 29,
-                  "endLine": 16,
-                  "endColumn": 34
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'Procedimientos' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/AppDBContext.cs",
-                "region": {
-                  "startLine": 10,
-                  "startColumn": 16,
-                  "endLine": 10,
-                  "endColumn": 28
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/AppDBContext.cs",
-                "region": {
-                  "startLine": 17,
-                  "startColumn": 38,
-                  "endLine": 17,
-                  "endColumn": 52
+                  "startLine": 6,
+                  "startColumn": 21,
+                  "endLine": 6,
+                  "endColumn": 26
                 }
               }
             }
@@ -161,17 +34,19 @@
         }
       ],
       "rules": {
-        "CS8618": {
-          "id": "CS8618",
-          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
+        "S2699": {
+          "id": "S2699",
+          "shortDescription": "Tests should include assertions",
+          "fullDescription": "The rule targets test methods that lack an assertion and consist solely of an action and, optionally, a setup.",
           "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2699",
           "properties": {
-            "category": "Compiler",
+            "category": "Blocker Code Smell",
             "isEnabledByDefault": true,
             "tags": [
-              "Compiler",
-              "Telemetry"
+              "C#",
+              "TestSourceScope",
+              "SonarWay"
             ]
           }
         }

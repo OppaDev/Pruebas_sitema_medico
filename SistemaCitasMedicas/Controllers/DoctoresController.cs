@@ -53,7 +53,7 @@ namespace SistemaCitasMedicas.Controllers
             }
             if (doctor == null)
             {
-                return NotFound();
+                return BadRequest("No existe");
             }
             _dbContext.Doctores.Remove(doctor);
             await _dbContext.SaveChangesAsync();

@@ -70,7 +70,7 @@ namespace SistemaCitasMedicas.Controllers
             var cita = await _dbContext.Citas.FindAsync(id);
             if (cita == null)
             {
-                return NotFound();
+                return BadRequest("No existe");
             }
             _dbContext.Citas.Remove(cita);
             await _dbContext.SaveChangesAsync();

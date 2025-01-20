@@ -64,7 +64,7 @@ namespace SistemaCitasMedicas.Controllers
             }
             if (procedimiento == null)
             {
-                return NotFound();
+                return BadRequest("No existe");
             }
             _dbContext.Procedimientos.Remove(procedimiento);
             await _dbContext.SaveChangesAsync();

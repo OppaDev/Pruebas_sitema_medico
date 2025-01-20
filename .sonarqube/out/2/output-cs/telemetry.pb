@@ -1,1 +1,1 @@
-ïRC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\SistemaCitasMedicas.csproj¢net9.0ÚCSharp13
+èRyC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\TestSitemaMedico\TestSitemaMedico.csproj¢net9.0ÚCSharp13

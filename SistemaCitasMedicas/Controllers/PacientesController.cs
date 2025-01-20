@@ -55,7 +55,7 @@ namespace SistemaCitasMedicas.Controllers
             }
             if (paciente == null)
             {
-                return NotFound();
+                return BadRequest("No existe");
             }
             _dbContext.Pacientes.Remove(paciente);
             await _dbContext.SaveChangesAsync();

@@ -1,3 +1,0 @@
-ƒ
-€C:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\TestProjectSistemaMedico\CitasControllerTest.csTestProjectSistemaMedicod
-,TestProjectSistemaMedico.CitasControllerTest4CreateCita_ShouldReturnBadRequest_WhenFechaIsInvalid
