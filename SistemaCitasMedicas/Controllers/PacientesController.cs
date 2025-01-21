@@ -29,7 +29,10 @@ namespace SistemaCitasMedicas.Controllers
             {
                 return BadRequest("Nombre y Apellido son requeridos");
             }
-
+            if (paciente.FechaNacimiento > DateTime.Today)
+            {
+                return BadRequest("Fecha de nacimiento no aceptada");
+            }
             _dbContext.Pacientes.Add(paciente);
             await _dbContext.SaveChangesAsync();
             return Ok(paciente);
@@ -39,6 +42,15 @@ namespace SistemaCitasMedicas.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdatePaciente(Pacientes paciente)
         {
+            if (string.IsNullOrWhiteSpace(paciente.Nombre) ||
+                string.IsNullOrWhiteSpace(paciente.Apellido))
+            {
+                return BadRequest("Nombre y Apellido son requeridos");
+            }
+            if (paciente.FechaNacimiento > DateTime.Today)
+            {
+                return BadRequest("Fecha de nacimiento no aceptada");
+            }
             _dbContext.Entry(paciente).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
             return Ok(paciente);

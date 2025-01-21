@@ -22,9 +22,10 @@ namespace SistemaCitasMedicas.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateProcedimiento(Procedimientos procedimiento)
         {
-            if (procedimiento.Costo < 0 || !decimal.TryParse(procedimiento.Costo.ToString(), out _))
+            if (procedimiento.)
+            if (procedimiento.Costo < 0)
             {
-                return BadRequest("Precio Negativo no aceptado o no es un número válido");
+                return BadRequest("Precio Negativo no aceptado");
             }
             var citaExiste = await _dbContext.Citas.AnyAsync(c => c.IdCita == procedimiento.IdCita);
             if (!citaExiste)
@@ -39,9 +40,9 @@ namespace SistemaCitasMedicas.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateProcedimiento(Procedimientos procedimiento)
         {
-            if (procedimiento.Costo < 0 || !decimal.TryParse(procedimiento.Costo.ToString(), out _))
+            if (procedimiento.Costo < 0)
             {
-                return BadRequest("Precio Negativo no aceptado o no es un número válido");
+                return BadRequest("Precio Negativo no aceptado");
             }
             var citaExiste = await _dbContext.Citas.AnyAsync(c => c.IdCita == procedimiento.IdCita);
             if (!citaExiste)
