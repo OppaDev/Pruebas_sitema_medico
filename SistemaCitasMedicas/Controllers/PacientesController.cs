@@ -48,7 +48,7 @@ namespace SistemaCitasMedicas.Controllers
         public async Task<IActionResult> DeletePaciente(int id)
         {
             var paciente = await _dbContext.Pacientes.FindAsync(id);    
-            var cita = await _dbContext.Citas.FirstOrDefaultAsync(x => x.IDPaciente == id);
+            var cita = await _dbContext.Citas.FirstOrDefaultAsync(x => x.IdPaciente == id);
             if (cita != null)
             {
                 return BadRequest("No se puede eliminar el paciente, tiene citas asignadas");

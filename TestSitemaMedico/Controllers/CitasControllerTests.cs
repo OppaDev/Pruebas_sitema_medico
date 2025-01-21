@@ -46,9 +46,9 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var cita = new Citas
             {
-                IDCita = 1,
-                IDPaciente = 1,
-                IDDoctor = 1,
+                IdCita = 1,
+                IdPaciente = 1,
+                IdDoctor = 1,
                 Fecha = new DateTime(2023, 1, 1, 8, 0, 0)
             };
             await _controller.CreateCita(cita);
@@ -69,9 +69,9 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var cita = new Citas
             {
-                IDCita = 1,
-                IDPaciente = 1,
-                IDDoctor = 1,
+                IdCita = 1,
+                IdPaciente = 1,
+                IdDoctor = 1,
                 Fecha = new DateTime(2023, 1, 1, 8, 0, 0)
             };
 
@@ -80,7 +80,7 @@ namespace TestSitemaMedico.Controllers
 
             // Assert
             Assert.NotNull(resultado);
-            var citaGuardada = await _context.Citas.FindAsync(cita.IDCita);
+            var citaGuardada = await _context.Citas.FindAsync(cita.IdCita);
             Assert.NotNull(citaGuardada);
             Assert.Equal(cita.Fecha, citaGuardada.Fecha);
         }
@@ -91,9 +91,9 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var cita = new Citas
             {
-                IDCita = 1,
-                IDPaciente = 1,
-                IDDoctor = 1,
+                IdCita = 1,
+                IdPaciente = 1,
+                IdDoctor = 1,
                 Fecha = new DateTime(2020, 1, 1, 8, 0, 0)
             };
 
@@ -111,9 +111,9 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var cita = new Citas
             {
-                IDCita = 1,
-                IDPaciente = 99, // Paciente inexistente
-                IDDoctor = 1,
+                IdCita = 1,
+                IdPaciente = 99, // Paciente inexistente
+                IdDoctor = 1,
                 Fecha = new DateTime(2023, 1, 1, 8, 0, 0)
             };
 
@@ -131,9 +131,9 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var cita = new Citas
             {
-                IDCita = 1,
-                IDPaciente = 1,
-                IDDoctor = 99, // Doctor inexistente
+                IdCita = 1,
+                IdPaciente = 1,
+                IdDoctor = 99, // Doctor inexistente
                 Fecha = new DateTime(2023, 1, 1, 8, 0, 0)
             };
 
@@ -151,9 +151,9 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var cita = new Citas
             {
-                IDCita = 1,
-                IDPaciente = 1,
-                IDDoctor = 1,
+                IdCita = 1,
+                IdPaciente = 1,
+                IdDoctor = 1,
                 Fecha = new DateTime(2023, 1, 1, 8, 0, 0)
             };
             await _controller.CreateCita(cita);
@@ -165,7 +165,7 @@ namespace TestSitemaMedico.Controllers
 
             // Assert
             Assert.NotNull(resultado);
-            var citaActualizada = await _context.Citas.FindAsync(cita.IDCita);
+            var citaActualizada = await _context.Citas.FindAsync(cita.IdCita);
             Assert.NotNull(citaActualizada);
             Assert.Equal(cita.Fecha, citaActualizada.Fecha);
         }
@@ -176,9 +176,9 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var cita = new Citas
             {
-                IDCita = 99, // Cita inexistente
-                IDPaciente = 1,
-                IDDoctor = 1,
+                IdCita = 99, // Cita inexistente
+                IdPaciente = 1,
+                IdDoctor = 1,
                 Fecha = new DateTime(2023, 1, 1, 8, 0, 0)
             };
 
@@ -195,19 +195,19 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var cita = new Citas
             {
-                IDCita = 1,
-                IDPaciente = 1,
-                IDDoctor = 1,
+                IdCita = 1,
+                IdPaciente = 1,
+                IdDoctor = 1,
                 Fecha = new DateTime(2023, 1, 1, 8, 0, 0)
             };
             await _controller.CreateCita(cita);
 
             // Act
-            var resultado = await _controller.DeleteCita(cita.IDCita) as OkResult;
+            var resultado = await _controller.DeleteCita(cita.IdCita) as OkResult;
 
             // Assert
             Assert.NotNull(resultado);
-            var citaEliminada = await _context.Citas.FindAsync(cita.IDCita);
+            var citaEliminada = await _context.Citas.FindAsync(cita.IdCita);
             Assert.Null(citaEliminada);
         }
 
@@ -228,17 +228,17 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var cita = new Citas
             {
-                IDCita = 1,
-                IDPaciente = 1,
-                IDDoctor = 1,
+                IdCita = 1,
+                IdPaciente = 1,
+                IdDoctor = 1,
                 Fecha = new DateTime(2023, 1, 1, 8, 0, 0)
             };
             await _controller.CreateCita(cita);
 
             var procedimiento = new Procedimientos
             {
-                IDProcedimiento = 1,
-                IDCita = 1,
+                IdProcedimiento = 1,
+                IdCita = 1,
                 Descripcion = "Procedimiento",
                 Costo = 100
             };
@@ -246,7 +246,7 @@ namespace TestSitemaMedico.Controllers
             await _context.SaveChangesAsync();
 
             // Act
-            var resultado = await _controller.DeleteCita(cita.IDCita) as BadRequestObjectResult;
+            var resultado = await _controller.DeleteCita(cita.IdCita) as BadRequestObjectResult;
 
             // Assert
             Assert.NotNull(resultado);

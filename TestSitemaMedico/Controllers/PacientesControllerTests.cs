@@ -46,7 +46,7 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var paciente = new Pacientes
             {
-                IDPaciente = 1,
+                IdPaciente = 1,
                 Nombre = "Juan",
                 Apellido = "Perez",
                 FechaNacimiento = new DateTime(1990, 1, 1)
@@ -67,7 +67,7 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var paciente = new Pacientes
             {
-                IDPaciente = 1,
+                IdPaciente = 1,
                 Nombre = "",
                 Apellido = "Perez",
                 FechaNacimiento = new DateTime(1990, 1, 1)
@@ -84,7 +84,7 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var paciente = new Pacientes
             {
-                IDPaciente = 1,
+                IdPaciente = 1,
                 Nombre = "Juan",
                 Apellido = "Perez",
                 FechaNacimiento = new DateTime(1990, 1, 1)
@@ -107,7 +107,7 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var paciente = new Pacientes
             {
-                IDPaciente = 1,
+                IdPaciente = 1,
                 Nombre = "Juan",
                 Apellido = "Perez",
                 FechaNacimiento = new DateTime(1990, 1, 1)
@@ -126,7 +126,7 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var paciente = new Pacientes
             {
-                IDPaciente = 1,
+                IdPaciente = 1,
                 Nombre = "Juan",
                 Apellido = "Perez",
                 FechaNacimiento = new DateTime(1990, 1, 1)
@@ -134,10 +134,10 @@ namespace TestSitemaMedico.Controllers
             await _controller.CreatePaciente(paciente);
             var cita = new Citas
             {
-                IDCita = 1,
+                IdCita = 1,
                 Fecha = new DateTime(2021, 1, 1),
-                IDPaciente = 1,
-                IDDoctor = 1
+                IdPaciente = 1,
+                IdDoctor = 1
             };
             await _context.Citas.AddAsync(cita);
             await _context.SaveChangesAsync();

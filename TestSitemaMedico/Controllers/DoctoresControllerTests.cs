@@ -43,7 +43,7 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var doctor = new Doctores
             {
-                IDDoctor = 1,
+                IdDoctor = 1,
                 Nombre = "Juan",
                 Apellido = "Perez",
                 Especialidad = "Cardiologia"
@@ -62,7 +62,7 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var doctor = new Doctores
             {
-                IDDoctor = 1,
+                IdDoctor = 1,
                 Nombre = "Juan",
                 Apellido = "Perez",
                 Especialidad = "Cardiologia"
@@ -83,7 +83,7 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var doctor = new Doctores
             {
-                IDDoctor = 1,
+                IdDoctor = 1,
                 Nombre = "Juan",
                 Apellido = "Perez",
                 Especialidad = "Cardiologia"
@@ -103,7 +103,7 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var doctor = new Doctores
             {
-                IDDoctor = 1,
+                IdDoctor = 1,
                 Nombre = "Juan",
                 Apellido = "Perez",
                 Especialidad = "Cardiologia"
@@ -111,10 +111,10 @@ namespace TestSitemaMedico.Controllers
             await _controller.CreateDoctor(doctor);
             var cita = new Citas
             {
-                IDCita = 1,
+                IdCita = 1,
                 Fecha = new DateTime(2021, 1, 1),
-                IDDoctor = 1,
-                IDPaciente = 1
+                IdDoctor = 1,
+                IdPaciente = 1
             };
             _context.Citas.Add(cita);
             await _context.SaveChangesAsync();
@@ -139,7 +139,7 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var doctor = new Doctores
             {
-                IDDoctor = 1,
+                IdDoctor = 1,
                 Nombre = "Juan",
                 Apellido = "Perez"
             };
@@ -155,7 +155,7 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var doctor = new Doctores
             {
-                IDDoctor = 1,
+                IdDoctor = 1,
                 Nombre = "Juan",
                 Apellido = "Perez",
                 Especialidad = "Cardiologia"
@@ -172,7 +172,7 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var doctor = new Doctores
             {
-                IDDoctor = 1,
+                IdDoctor = 1,
                 Nombre = "Juan",
                 Apellido = "Perez",
                 Especialidad = "Cardiologia"

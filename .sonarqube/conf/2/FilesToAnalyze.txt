@@ -3,8 +3,8 @@ C:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas
 C:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Controllers\DoctoresController.cs
 C:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Controllers\PacientesController.cs
 C:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Controllers\ProcedimientosController.cs
-C:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Migrations\20250116135841_InitialCreate.cs
-C:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Migrations\20250116135841_InitialCreate.Designer.cs
+C:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Migrations\20250121020732_InitialCreate.cs
+C:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Migrations\20250121020732_InitialCreate.Designer.cs
 C:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Migrations\AppDBContextModelSnapshot.cs
 C:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Program.cs
 C:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\obj\Debug\net9.0\SistemaCitasMedicas.GlobalUsings.g.cs

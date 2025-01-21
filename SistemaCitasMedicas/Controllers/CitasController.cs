@@ -8,62 +8,74 @@ namespace SistemaCitasMedicas.Controllers
     public class CitasController : ControllerBase
     {
         private readonly AppDBContext _dbContext;
+
         public CitasController(AppDBContext dbContext)
         {
             _dbContext = dbContext;
         }
-        //obtener citas
+
+        // Método privado para validaciones comunes
+        private async Task<IActionResult?> ValidarCita(Citas cita)
+        {
+            if (cita.Hora < TimeSpan.FromHours(7) || cita.Hora > TimeSpan.FromHours(16))
+            {
+                return BadRequest("Hora no aceptada");
+            }
+
+            if (cita.Fecha < DateTime.Today)
+            {
+                return BadRequest("Fecha no aceptada");
+            }
+
+            var pacienteExiste = await _dbContext.Pacientes.AnyAsync(p => p.IdPaciente == cita.IdPaciente);
+            if (!pacienteExiste)
+            {
+                return BadRequest("El paciente no existe");
+            }
+
+            var doctorExiste = await _dbContext.Doctores.AnyAsync(d => d.IdDoctor == cita.IdDoctor);
+            if (!doctorExiste)
+            {
+                return BadRequest("El Doctor no Existe");
+            }
+
+            return null; 
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetCitas()
         {
             return Ok(await _dbContext.Citas.ToListAsync());
         }
-        //crear cita
+
         [HttpPost]
         public async Task<IActionResult> CreateCita(Citas cita)
         {
-            if (cita.Fecha < DateTime.Today)
+            var validationResult = await ValidarCita(cita);
+            if (validationResult != null)
             {
-                return BadRequest("Fecha no aceptada");
+                return validationResult;
             }
-            var pacienteExiste = await _dbContext.Pacientes.AnyAsync(p => p.IDPaciente == cita.IDPaciente);
-            if (!pacienteExiste) 
-            {
-                return BadRequest("El paciente no existe");
-            }
-            var doctorExiste = await _dbContext.Doctores.AnyAsync(d => d.IDDoctor == cita.IDDoctor);
-            if (!doctorExiste) 
-            {
-                return BadRequest("El Doctor no Existe");
-            }
+
             _dbContext.Citas.Add(cita);
             await _dbContext.SaveChangesAsync();
             return Ok();
-
         }
-        //actualizar cita
+
         [HttpPut]
         public async Task<IActionResult> UpdateCita(Citas cita)
         {
-            if (cita.Fecha < DateTime.Today)
+            var validationResult = await ValidarCita(cita);
+            if (validationResult != null)
             {
-                return BadRequest("Fecha no aceptada");
+                return validationResult;
             }
-            var pacienteExiste = await _dbContext.Pacientes.AnyAsync(p => p.IDPaciente == cita.IDPaciente);            
-            if (!pacienteExiste)
-            {
-                return BadRequest("El paciente no existe");
-            }
-            var doctorExiste = await _dbContext.Doctores.AnyAsync(d => d.IDDoctor == cita.IDDoctor);
-            if (!doctorExiste)
-            {
-                return BadRequest("El Doctor no Existe");
-            }
+
             _dbContext.Entry(cita).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
             return Ok(cita);
         }
-        //eliminar cita
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCita(int id)
         {
@@ -72,6 +84,7 @@ namespace SistemaCitasMedicas.Controllers
             {
                 return BadRequest("No existe");
             }
+
             _dbContext.Citas.Remove(cita);
             await _dbContext.SaveChangesAsync();
             return Ok();

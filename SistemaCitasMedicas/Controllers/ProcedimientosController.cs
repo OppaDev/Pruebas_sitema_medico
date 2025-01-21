@@ -26,7 +26,7 @@ namespace SistemaCitasMedicas.Controllers
             {
                 return BadRequest("Precio Negativo no aceptado");
             }
-            var citaExiste = await _dbContext.Citas.AnyAsync(c => c.IDCita == procedimiento.IDCita);
+            var citaExiste = await _dbContext.Citas.AnyAsync(c => c.IdCita == procedimiento.IdCita);
             if (!citaExiste)
             {
                 return BadRequest("La cita no existe");
@@ -43,7 +43,7 @@ namespace SistemaCitasMedicas.Controllers
             {
                 return BadRequest("Precio Negativo no aceptado");
             }
-            var citaExiste = await _dbContext.Citas.AnyAsync(c => c.IDCita == procedimiento.IDCita);
+            var citaExiste = await _dbContext.Citas.AnyAsync(c => c.IdCita == procedimiento.IdCita);
             if (!citaExiste)
             {
                 return BadRequest("La cita no existe");
@@ -57,7 +57,7 @@ namespace SistemaCitasMedicas.Controllers
         public async Task<IActionResult> DeleteProcedimiento(int id)
         {
             var procedimiento = await _dbContext.Procedimientos.FindAsync(id);
-            var cita = await _dbContext.Citas.FirstOrDefaultAsync(x => x.IDCita == id);
+            var cita = await _dbContext.Citas.FirstOrDefaultAsync(x => x.IdCita == id);
             if (cita != null)
             {
                 return BadRequest("No se puede eliminar el procedimiento, tiene citas asignadas");

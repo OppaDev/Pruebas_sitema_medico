@@ -43,10 +43,10 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var procedimiento = new Procedimientos
             {
-                IDProcedimiento = 1,
+                IdProcedimiento = 1,
                 Descripcion = "Procedimiento 1",
                 Costo = 100,
-                IDCita = 1
+                IdCita = 1
             };
             // Act
             var resultado = await _controller.CreateProcedimiento(procedimiento) as OkObjectResult;
@@ -62,10 +62,10 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var procedimiento = new Procedimientos
             {
-                IDProcedimiento = 1,
+                IdProcedimiento = 1,
                 Descripcion = "Procedimiento 1",
                 Costo = -100,
-                IDCita = 1
+                IdCita = 1
             };
             // Act
             var resultado = await _controller.CreateProcedimiento(procedimiento) as BadRequestObjectResult;
@@ -79,10 +79,10 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var procedimiento = new Procedimientos
             {
-                IDProcedimiento = 1,
+                IdProcedimiento = 1,
                 Descripcion = "Procedimiento 1",
                 Costo = 100,
-                IDCita = 1
+                IdCita = 1
             };
             await _controller.CreateProcedimiento(procedimiento);
             procedimiento.Descripcion = "Procedimiento 2";
@@ -100,10 +100,10 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var procedimiento = new Procedimientos
             {
-                IDProcedimiento = 1,
+                IdProcedimiento = 1,
                 Descripcion = "Procedimiento 1",
                 Costo = 100,
-                IDCita = 1
+                IdCita = 1
             };
             await _controller.CreateProcedimiento(procedimiento);
             procedimiento.Costo = -100;
@@ -119,10 +119,10 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var procedimiento = new Procedimientos
             {
-                IDProcedimiento = 1,
+                IdProcedimiento = 1,
                 Descripcion = "Procedimiento 1",
                 Costo = 100,
-                IDCita = 1
+                IdCita = 1
             };
             await _controller.CreateProcedimiento(procedimiento);
             // Act
@@ -139,18 +139,18 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var procedimiento = new Procedimientos
             {
-                IDProcedimiento = 1,
+                IdProcedimiento = 1,
                 Descripcion = "Procedimiento 1",
                 Costo = 100,
-                IDCita = 1
+                IdCita = 1
             };
             await _controller.CreateProcedimiento(procedimiento);
             var cita = new Citas
             {
-                IDCita = 1,
+                IdCita = 1,
                 Fecha = new DateTime(2021, 1, 1),
-                IDPaciente = 1,
-                IDDoctor = 1
+                IdPaciente = 1,
+                IdDoctor = 1
             };
             await _context.Citas.AddAsync(cita);
             await _context.SaveChangesAsync();
@@ -166,18 +166,18 @@ namespace TestSitemaMedico.Controllers
             // Arrange
             var procedimiento = new Procedimientos
             {
-                IDProcedimiento = 1,
+                IdProcedimiento = 1,
                 Descripcion = "Procedimiento 1",
                 Costo = 100,
-                IDCita = 1
+                IdCita = 1
             };
             await _controller.CreateProcedimiento(procedimiento);
             var cita = new Citas
             {
-                IDCita = 1,
+                IdCita = 1,
                 Fecha = new DateTime(2021, 1, 1),
-                IDPaciente = 1,
-                IDDoctor = 1
+                IdPaciente = 1,
+                IdDoctor = 1
             };
             await _context.Citas.AddAsync(cita);
             await _context.SaveChangesAsync();

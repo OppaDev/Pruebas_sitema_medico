@@ -21,7 +21,7 @@ namespace SistemaCitasMedicas
     public class Pacientes
     {
         [Key]
-        public required int IDPaciente { get; set; }
+        public required int IdPaciente { get; set; }
         public string? Nombre { get; set; }
         public string? Apellido { get; set; }
         public DateTime? FechaNacimiento { get; set; }
@@ -31,7 +31,7 @@ namespace SistemaCitasMedicas
     public class Doctores
     {
         [Key]
-        public required int IDDoctor { get; set; }
+        public required int IdDoctor { get; set; }
         public string? Nombre { get; set; }
         public string? Apellido { get; set; }
         public string? Especialidad { get; set; }
@@ -40,18 +40,19 @@ namespace SistemaCitasMedicas
     public class Citas
     {
         [Key]
-        public required int IDCita { get; set; }
+        public required int IdCita { get; set; }
         public DateTime? Fecha { get; set; }
-        public int? IDPaciente { get; set; }
-        public int? IDDoctor { get; set; }
+        public TimeSpan? Hora { get; set; }
+        public int? IdPaciente { get; set; }
+        public int? IdDoctor { get; set; }
     }
 
     public class Procedimientos
     {
         [Key]
-        public required int IDProcedimiento { get; set; }
+        public required int IdProcedimiento { get; set; }
         public string? Descripcion { get; set; }
         [JsonRequired] public decimal Costo { get; set; }
-        public int? IDCita { get; set; }
+        public int? IdCita { get; set; }
     }
 }

@@ -158,6 +158,152 @@
           "properties": {
             "warningLevel": 1
           }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'SqlServer:Identity' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/Migrations/20250121020732_InitialCreate.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 37,
+                  "endLine": 19,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/Migrations/20250121020732_InitialCreate.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 37,
+                  "endLine": 35,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/Migrations/20250121020732_InitialCreate.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 37,
+                  "endLine": 50,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/Migrations/20250121020732_InitialCreate.cs",
+                "region": {
+                  "startLine": 65,
+                  "startColumn": 37,
+                  "endLine": 65,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'nvarchar(max)' 6 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/Migrations/20250121020732_InitialCreate.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 57,
+                  "endLine": 36,
+                  "endColumn": 72
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/Migrations/20250121020732_InitialCreate.cs",
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 59,
+                  "endLine": 37,
+                  "endColumn": 74
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/Migrations/20250121020732_InitialCreate.cs",
+                "region": {
+                  "startLine": 38,
+                  "startColumn": 63,
+                  "endLine": 38,
+                  "endColumn": 78
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/Migrations/20250121020732_InitialCreate.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 57,
+                  "endLine": 51,
+                  "endColumn": 72
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/Migrations/20250121020732_InitialCreate.cs",
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 59,
+                  "endLine": 52,
+                  "endColumn": 74
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/Migrations/20250121020732_InitialCreate.cs",
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 62,
+                  "endLine": 66,
+                  "endColumn": 77
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          }
         }
       ],
       "rules": {
@@ -172,6 +318,22 @@
             "tags": [
               "Compiler",
               "Telemetry"
+            ]
+          }
+        },
+        "S1192": {
+          "id": "S1192",
+          "shortDescription": "String literals should not be duplicated",
+          "fullDescription": "Duplicated string literals make the process of refactoring complex and error-prone, as any change would need to be propagated on all occurrences.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1192",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
             ]
           }
         }
