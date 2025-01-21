@@ -1,1 +1,0 @@
-•RC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\SistemaCitasMedicas.csproj¢net9.0òCSharp13

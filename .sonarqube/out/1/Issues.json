@@ -11,7 +11,41 @@
         "language": "en-US"
       },
       "results": [
-      ]
+        {
+          "ruleId": "CS1001",
+          "level": "error",
+          "message": "Identifier expected",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/OppaDev/Desktop/Pruebas%20de%20Software/Segundo%20parcial/SistemaCitasMedicas/SistemaCitasMedicas/Controllers/ProcedimientosController.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 31,
+                  "endLine": 25,
+                  "endColumn": 32
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "rules": {
+        "CS1001": {
+          "id": "CS1001",
+          "defaultLevel": "error",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1001)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry",
+              "NotConfigurable"
+            ]
+          }
+        }
+      }
     }
   ]
 }

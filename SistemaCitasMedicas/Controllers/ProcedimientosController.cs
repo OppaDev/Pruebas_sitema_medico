@@ -22,7 +22,6 @@ namespace SistemaCitasMedicas.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateProcedimiento(Procedimientos procedimiento)
         {
-            if (procedimiento.)
             if (procedimiento.Costo < 0)
             {
                 return BadRequest("Precio Negativo no aceptado");
