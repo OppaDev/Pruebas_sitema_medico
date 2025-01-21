@@ -14,7 +14,7 @@ namespace SistemaCitasMedicas.Controllers
             _dbContext = dbContext;
         }
 
-        // Método privado para validaciones comunes
+        // Validaciones
         private async Task<IActionResult?> ValidarCita(Citas cita)
         {
             if (cita.Hora < TimeSpan.FromHours(7) || cita.Hora > TimeSpan.FromHours(16))
@@ -80,6 +80,11 @@ namespace SistemaCitasMedicas.Controllers
         public async Task<IActionResult> DeleteCita(int id)
         {
             var cita = await _dbContext.Citas.FindAsync(id);
+            var procedimiento = await _dbContext.Procedimientos.FirstOrDefaultAsync(x => x.IdCita == id);
+            if (procedimiento != null)
+            {
+                return BadRequest("No se puede eliminar la cita, tiene procedimientos asignados");
+            }
             if (cita == null)
             {
                 return BadRequest("No existe");
