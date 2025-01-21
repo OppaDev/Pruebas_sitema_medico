@@ -1690,7 +1690,7 @@ _dbContext;; 
 ;<< 
 }== 	
 }>> 
-}?? †7
+}?? Ù;
 ƒC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Controllers\CitasController.cs
 	namespace 	
 SistemaCitasMedicas
@@ -2074,48 +2074,83 @@ _dbContextRR '
 (RR7 8
 idRR8 :
 )RR: ;
-;RR; <
-ifSS 
-(SS 
-citaSS 
-==SS 
-nullSS 
-)SS 
-{TT 
-returnUU 
+;RR; <
+varSS 
+procedimientoSS 
+=SS 
+awaitSS  %
 
-BadRequestUU !
-(UU! "
-$strUU" -
-)UU- .
-;UU. /
-}VV 
+_dbContextSS& 0
+.SS0 1
+ProcedimientosSS1 ?
+.SS? @
+FirstOrDefaultAsyncSS@ S
+(SSS T
+xSST U
+=>SSV X
+xSSY Z
+.SSZ [
+IdCitaSS[ a
+==SSb d
+idSSe g
+)SSg h
+;SSh i
+ifTT 
+(TT 
+procedimientoTT 
+!=TT  
+nullTT! %
+)TT% &
+{UU 
+returnVV 
 
-_dbContextXX 
-.XX 
-CitasXX 
-.XX 
-RemoveXX #
-(XX# $
-citaXX$ (
-)XX( )
-;XX) *
-awaitYY 
+BadRequestVV !
+(VV! "
+$strVV" `
+)VV` a
+;VVa b
+}WW 
+ifXX 
+(XX 
+citaXX 
+==XX 
+nullXX 
+)XX 
+{YY 
+returnZZ 
 
-_dbContextYY 
-.YY 
-SaveChangesAsyncYY -
-(YY- .
-)YY. /
-;YY/ 0
-returnZZ 
-OkZZ 
-(ZZ 
-)ZZ 
-;ZZ 
-}[[ 	
-}\\ 
-}]] ý&
+BadRequestZZ !
+(ZZ! "
+$strZZ" -
+)ZZ- .
+;ZZ. /
+}[[ 
+
+_dbContext]] 
+.]] 
+Citas]] 
+.]] 
+Remove]] #
+(]]# $
+cita]]$ (
+)]]( )
+;]]) *
+await^^ 
+
+_dbContext^^ 
+.^^ 
+SaveChangesAsync^^ -
+(^^- .
+)^^. /
+;^^/ 0
+return__ 
+Ok__ 
+(__ 
+)__ 
+;__ 
+}`` 	
+}aa 
+}bb ý&
 tC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\AppDBContext.cs
 	namespace 	
 SistemaCitasMedicas

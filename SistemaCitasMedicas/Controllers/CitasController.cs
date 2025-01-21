@@ -17,15 +17,15 @@ namespace SistemaCitasMedicas.Controllers
         // Validaciones
         private async Task<IActionResult?> ValidarCita(Citas cita)
         {
-            if (cita.Hora < TimeSpan.FromHours(7) || cita.Hora > TimeSpan.FromHours(16))
-            {
-                return BadRequest("Hora no aceptada");
-            }
-
             if (cita.Fecha < DateTime.Today)
             {
                 return BadRequest("Fecha no aceptada");
             }
+
+            if (cita.Hora < TimeSpan.FromHours(7) || cita.Hora > TimeSpan.FromHours(16))
+            {
+                return BadRequest("Hora no aceptada");
+            }        
 
             var pacienteExiste = await _dbContext.Pacientes.AnyAsync(p => p.IdPaciente == cita.IdPaciente);
             if (!pacienteExiste)

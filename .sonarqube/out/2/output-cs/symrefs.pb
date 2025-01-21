@@ -91,13 +91,13 @@ oC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedica
 ..: <00= ?11U W(
 00 66 ::' -<< 
 11 22 
-11B C11G HÈ
+11B C11G H‰
 ƒC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Controllers\CitasController.cs
 
-  x
+  ‚
 
 
-& 0 ' 1$$% /00 &<< == JJ KK RR 'XX YY 
+& 0 ' 1$$% /00 &<< == JJ KK RR 'SS& 0]] ^^ 
 , 5 "
 + 666) 4DD) 4<
 = A 5 9 Z ^$$U Y
@@ -116,9 +116,11 @@ oC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedica
 BB: >DD5 9JJ !LL 
 DD  EE  GG '
 
-PP) 3
-PP8 :RR8 :
-RR SS XX$ (ö
+PP) 3
+PP8 :RR8 :SSe g
+RR XX ]]$ (
+SS TT 
+SST USSY Zö
 tC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\AppDBContext.cs
  
 

@@ -1,76 +1,4 @@
-ì
-oC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Program.cs>
-       
- 
-, 3 J
-      !! ## 	®
-èC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Migrations\20250121020732_InitialCreate.cs
-
-		 &
-
-  "2
-4 D  -- << <
-  " !  ! & $
- " 
-1 26 72
-   "" $$$ "%% $&&# (
-(( "** 
-**4 5**9 :2
-// 11! &33 "44 $55& +
-77 "99 
-995 699: ;2
->> @@& +BB" 'CC !DD "
-FF "HH 
-HH: ;HH? @
-
-MM  $2
-MM6 FOO RR UU XX í
-åC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Controllers\ProcedimientosController.cs
-
- )Ç
-
-
-& 0  &# -"" ## ..# -33 44 ;;& 0<< 'EE FF 
-5 > "
-
-) :
-
-) <2
-L Y N [""* 7$$ #
-  
-= >B C
-
-(() <2
-((L Y** ..N [33 *55 #
-.. // 
-..= >..B C
-
-99) <
-99A C;;J L<<S U
-;; AA EE- :
-<< == 
-<<B C<<G Hå
-áC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Controllers\PacientesController.cs
-
- $n
-
-
-& 0  &!! "" ** ++ 22! +33 '<< == 
-0 9 "
-
-) 5
-
-) 72
-B J* 2* 2!!% -## 
-
-(() 7
-((B J** %,, 
-
-00) 7
-00< >22@ B33W Y
-22 88 <<( 0
-33 44 
-33B C33G Hü
+ü
 ÜC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Controllers\DoctoresController.cs
 
  #n
@@ -91,34 +19,7 @@ oC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedica
 ..: <00= ?11U W(
 00 66 ::' -<< 
 11 22 
-11B C11G H»
-ÉC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Controllers\CitasController.cs
-
-  x
-
-
-& 0 ' 1$$% /00 &<< == JJ KK RR 'XX YY 
-, 5 "
-+ 666) 4DD) 4<
-= A 5 9 Z ^$$U Y
-  
-E FJ K
-$$ %% 
-$$B C$$G H
-
-..) 1
-
-44) 3
-44: >665 9<<! %
-66  77  99 '
-
-BB) 3(
-BB: >DD5 9JJ !LL 
-DD  EE  GG '
-
-PP) 3
-PP8 :RR8 :
-RR SS XX$ (ˆ
+11B C11G Hˆ
 tC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\AppDBContext.cs
  
 
@@ -173,4 +74,105 @@ tC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedica
 
 77& +
 
-88 
+88 å
+áC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Controllers\PacientesController.cs
+
+ $n
+
+
+& 0  &!! "" ** ++ 22! +33 '<< == 
+0 9 "
+
+) 5
+
+) 72
+B J* 2* 2!!% -## 
+
+(() 7
+((B J** %,, 
+
+00) 7
+00< >22@ B33W Y
+22 88 <<( 0
+33 44 
+33B C33G H®
+èC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Migrations\20250121020732_InitialCreate.cs
+
+		 &
+
+  "2
+4 D  -- << <
+  " !  ! & $
+ " 
+1 26 72
+   "" $$$ "%% $&&# (
+(( "** 
+**4 5**9 :2
+// 11! &33 "44 $55& +
+77 "99 
+995 699: ;2
+>> @@& +BB" 'CC !DD "
+FF "HH 
+HH: ;HH? @
+
+MM  $2
+MM6 FOO RR UU XX ì
+oC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Program.cs>
+       
+ 
+, 3 J
+      !! ## 	â
+ÉC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Controllers\CitasController.cs
+
+  Ç
+
+
+& 0 ' 1$$% /00 &<< == JJ KK RR 'SS& 0]] ^^ 
+, 5 "
++ 666) 4DD) 4<
+= A 5 9 Z ^$$U Y
+  
+E FJ K
+$$ %% 
+$$B C$$G H
+
+..) 1
+
+44) 3
+44: >665 9<<! %
+66  77  99 '
+
+BB) 3(
+BB: >DD5 9JJ !LL 
+DD  EE  GG '
+
+PP) 3
+PP8 :RR8 :SSe g
+RR XX ]]$ (
+SS TT 
+SST USSY Zí
+åC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\SistemaCitasMedicas\Controllers\ProcedimientosController.cs
+
+ )Ç
+
+
+& 0  &# -"" ## ..# -33 44 ;;& 0<< 'EE FF 
+5 > "
+
+) :
+
+) <2
+L Y N [""* 7$$ #
+  
+= >B C
+
+(() <2
+((L Y** ..N [33 *55 #
+.. // 
+..= >..B C
+
+99) <
+99A C;;J L<<S U
+;; AA EE- :
+<< == 
+<<B C<<G H
