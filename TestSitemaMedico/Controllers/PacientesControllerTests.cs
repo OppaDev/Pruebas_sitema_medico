@@ -79,6 +79,23 @@ namespace TestSitemaMedico.Controllers
             Assert.Equal("Nombre y Apellido son requeridos", resultado.Value);
         }
         [Fact]
+        public async Task CreatePaciente_FallaPorFechaNacimientoInvalida()
+        {
+            // Arrange
+            var paciente = new Pacientes
+            {
+                IdPaciente = 1,
+                Nombre = "Juan",
+                Apellido = "Perez",
+                FechaNacimiento = new DateTime(2022, 1, 1)
+            };
+            // Act
+            var resultado = await _controller.CreatePaciente(paciente) as BadRequestObjectResult;
+            // Assert
+            Assert.NotNull(resultado);
+            Assert.Equal("Fecha de nacimiento no aceptada", resultado.Value);
+        }
+        [Fact]
         public async Task UpdatePaciente_ActualizaPaciente()
         {
             // Arrange
@@ -100,6 +117,25 @@ namespace TestSitemaMedico.Controllers
             Assert.Equal(paciente.Nombre, pacienteActualizado.Nombre);
             Assert.Equal(paciente.Apellido, pacienteActualizado.Apellido);
             Assert.Equal(paciente.FechaNacimiento, pacienteActualizado.FechaNacimiento);
+        }
+        [Fact]
+        public async Task UpdatePaciente_FallaPorNombreVacio()
+        {
+            // Arrange
+            var paciente = new Pacientes
+            {
+                IdPaciente = 1,
+                Nombre = "Juan",
+                Apellido = "Perez",
+                FechaNacimiento = new DateTime(1990, 1, 1)
+            };
+            await _controller.CreatePaciente(paciente);
+            paciente.Nombre = "";
+            // Act
+            var resultado = await _controller.UpdatePaciente(paciente) as BadRequestObjectResult;
+            // Assert
+            Assert.NotNull(resultado);
+            Assert.Equal("Nombre y Apellido son requeridos", resultado.Value);
         }
         [Fact]
         public async Task DeletePaciente_EliminaPaciente()

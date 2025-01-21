@@ -37,6 +37,12 @@ namespace SistemaCitasMedicas.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateDoctor(Doctores doctor)
         {
+            if (string.IsNullOrWhiteSpace(doctor.Nombre) ||
+               string.IsNullOrWhiteSpace(doctor.Apellido) ||
+               string.IsNullOrWhiteSpace(doctor.Especialidad))
+            {
+                return BadRequest("Nombre, Apellido y Especialidad son requeridos");
+            }
             _dbContext.Entry(doctor).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
             return Ok(doctor);

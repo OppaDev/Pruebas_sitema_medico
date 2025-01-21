@@ -1,0 +1,1 @@
+èRyC:\Users\OppaDev\Desktop\Pruebas de Software\Segundo parcial\SistemaCitasMedicas\TestSitemaMedico\TestSitemaMedico.csproj¢net9.0ÚCSharp13
